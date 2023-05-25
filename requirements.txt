@@ -1,11 +1,25 @@
+wheel
+
 tensorflow
 tensorboard-plugin-profile
+tf2onnx
+
 
 kaggle
 keras
+
+onnxruntime
+onnxruntime-gpu
+
+torch 
+torchvision 
+torchaudio
+
+opencv-python 
 
 matplotlib
 numpy 
 
 wandb
 
+pytube
