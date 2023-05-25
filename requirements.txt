@@ -1,2 +1,11 @@
 tensorflow
+tensorboard-plugin-profile
+
+kaggle
 keras
+
+matplotlib
+numpy 
+
+wandb
+
