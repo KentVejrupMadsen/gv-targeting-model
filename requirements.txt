@@ -11,10 +11,6 @@ keras
 onnxruntime
 onnxruntime-gpu
 
-torch 
-torchvision 
-torchaudio
-
 opencv-python 
 
 matplotlib
