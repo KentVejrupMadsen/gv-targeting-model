@@ -12,10 +12,14 @@ def get_randomized_seed() -> int:
 
     return randomized_seed
 
-def set_randomized_seed(value:int) -> int:
+
+def set_randomized_seed(
+        value:int
+    ) -> int:
     global randomized_seed
     randomized_seed = value
     return randomized_seed
+
 
 def is_randomized_seed_zero() -> bool:
     global randomized_seed
@@ -32,9 +36,11 @@ def init_value() -> None:
             )
         )
 
+
 def get_is_to_reset_seed() -> bool:
     global reset_seed
     return reset_seed
+
 
 def set_is_to_reset_seed(
         value:bool
