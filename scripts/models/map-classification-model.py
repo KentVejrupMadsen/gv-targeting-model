@@ -1,6 +1,7 @@
 from keras \
     import Sequential
 
+
 from keras.layers \
     import \
         Rescaling, \
@@ -9,6 +10,7 @@ from keras.layers \
         GlobalAveragePooling2D, \
         Flatten, \
         Dense
+
 
 from scripts.models.template \
     import \
@@ -198,12 +200,13 @@ def classifier_layers() -> None:
 
 
 
-def generate_layers() -> list:
+def generated_layers() -> list:
     global ml_layers
 
-    preprocessing_layers()
-    neural_network_layers()
-    classifier_layers()
+    if len(ml_layers) == 0:
+        preprocessing_layers()
+        neural_network_layers()
+        classifier_layers()
 
     return ml_layers
 
@@ -211,7 +214,7 @@ def generate_layers() -> list:
 def setup_classify_map_model():
     set_classify_map_model(
         Sequential(
-            generate_layers()
+            generated_layers()
         )
     )
 
