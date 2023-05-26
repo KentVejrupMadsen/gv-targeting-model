@@ -1,3 +1,7 @@
+from scripts.constants \
+    import zero
+
+
 # variables
 channels = 3
 
@@ -16,7 +20,7 @@ def is_categories_empty() -> bool:
     global categories
     return \
         (categories is None) or \
-        (get_number_of_categories() == 0)
+        (get_number_of_categories() == zero())
 
 
 ## getters
