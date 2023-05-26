@@ -5,7 +5,8 @@ from keras.layers \
     import \
         Rescaling, \
         Conv2D, \
-        MaxPool2D, \
+        MaxPooling2D, \
+        GlobalAveragePooling2D, \
         Flatten, \
         Dense
 
@@ -40,6 +41,140 @@ def preprocessing_layers() -> None:
 def neural_network_layers() -> None:
     global ml_layers
 
+    ml_layers.append(
+        Conv2D(
+            128, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        GlobalAveragePooling2D()
+    )
+
+    ml_layers.append(
+        Conv2D(
+            64, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            64, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            64, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            64, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+    
+    ml_layers.append(
+        MaxPooling2D((2, 2))
+    )
+
+
+    ml_layers.append(
+        Conv2D(
+            32, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            32, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            32, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            32, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        MaxPooling2D((2, 2))
+    )
+
+
+    ml_layers.append(
+        Conv2D(
+            8, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            8, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            8, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        Conv2D(
+            8, 
+            get_channels(), 
+            padding='same', 
+            activation='relu'
+        )
+    )
+
+    ml_layers.append(
+        MaxPooling2D((2, 2))
+    )
 
 
 def classifier_layers() -> None:
