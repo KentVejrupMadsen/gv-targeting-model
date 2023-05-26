@@ -42,7 +42,8 @@ def is_randomized_seed_zero() -> bool:
 
 ## functions
 def init_value() -> None:
-    if is_randomized_seed_zero() or get_is_to_reset_seed():
+    if is_randomized_seed_zero() or \
+        get_is_to_reset_seed():
         system_random = random.SystemRandom()
         set_randomized_seed(
             system_random.randint(
