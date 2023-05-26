@@ -3,7 +3,7 @@ channels = 3
 vision_width = 128
 vision_height = 128
 
-categories = 4
+number_of_categories = 4
 last_layer_multiplier = 8
 
 
@@ -12,9 +12,9 @@ def get_last_layer_multiplier() -> int:
     return last_layer_multiplier
 
 
-def get_categories() -> int:
-    global categories
-    return categories
+def get_number_of_categories() -> int:
+    global number_of_categories
+    return number_of_categories
 
 
 def get_channels() -> int:
@@ -61,8 +61,8 @@ def set_channels(
     channels = value
 
 
-def set_categories( 
+def set_number_of_categories( 
         value: int 
     ) -> None:
-    global categories
-    categories = value
+    global number_of_categories
+    number_of_categories = value

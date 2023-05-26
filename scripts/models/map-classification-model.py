@@ -17,7 +17,7 @@ from scripts.models.template \
         get_channels, \
         get_vision_height, \
         get_vision_width, \
-        get_categories, \
+        get_number_of_categories, \
         get_last_layer_multiplier
 
 
@@ -187,14 +187,14 @@ def classifier_layers() -> None:
 
     ml_layers.append(
         Dense(
-            get_last_layer_multiplier() * get_categories(), 
+            get_last_layer_multiplier() * get_number_of_categories(), 
             activation='relu'
         )
     )
 
     ml_layers.append(
         Dense(
-            get_categories()
+            get_number_of_categories()
         )
     )
 
