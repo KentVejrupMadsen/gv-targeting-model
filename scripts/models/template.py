@@ -1,10 +1,28 @@
+# variables
 channels = 3
 
 vision_width = 128
 vision_height = 128
 
-number_of_categories = 4
+number_of_categories = 0
+categories = None
+
 last_layer_multiplier = 8
+
+
+# Accessors
+## states
+def is_categories_empty() -> bool:
+    global categories
+    return \
+        (categories is None) or \
+        (get_number_of_categories() == 0)
+
+
+## getters
+def get_categories() -> list|None:
+    global categories
+    return categories
 
 
 def get_last_layer_multiplier() -> int:
@@ -32,7 +50,7 @@ def get_vision_height() -> int:
     return vision_width
 
 
-
+## setters
 def set_vision_width(
         value: int
     ) -> None:
@@ -66,3 +84,16 @@ def set_number_of_categories(
     ) -> None:
     global number_of_categories
     number_of_categories = value
+
+
+def set_categories(
+        value: list
+    ) -> None:
+    global categories
+
+    if not (len(value) == get_number_of_categories()):
+        set_number_of_categories(
+            len(value)
+        )
+
+    categories = value
