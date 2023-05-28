@@ -1,1 +1,3 @@
-# ml-game-targeting
+# ML: Game targeting model
+
+
