@@ -10,7 +10,7 @@ from keras.layers \
     MaxPooling2D, \
     GlobalAveragePooling2D
 
-from src.variables.model_settings \
+from src.GameVisionTargetingModel.variables.model_settings \
     import \
     get_number_of_labels, \
     get_input_set, \
