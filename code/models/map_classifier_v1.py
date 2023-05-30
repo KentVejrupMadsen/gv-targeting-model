@@ -10,7 +10,7 @@ from keras.layers \
     MaxPooling2D, \
     GlobalAveragePooling2D
 
-from scripts.variables.model_settings \
+from code.variables.model_settings \
     import \
     get_number_of_labels, \
     get_input_set, \
@@ -58,9 +58,12 @@ def generate_middle_layer(
 def generate_first_middle_layer(
         layers: list
 ):
+    
+    first_layer_size = 512
+
     layers.append(
         Conv2D(
-            256,
+            first_layer_size,
             get_channels(),
             padding='same',
             activation='relu'
@@ -69,7 +72,7 @@ def generate_first_middle_layer(
 
     layers.append(
         Conv2D(
-            256,
+            first_layer_size,
             get_channels(),
             padding='same',
             activation='relu'
@@ -86,9 +89,11 @@ def generate_first_middle_layer(
 def generate_second_middle_layer(
         layers: list
 ):
+    second_layer_size = 256
+
     layers.append(
         Conv2D(
-            128,
+            second_layer_size,
             get_channels(),
             padding='same',
             activation='relu'
@@ -97,7 +102,25 @@ def generate_second_middle_layer(
 
     layers.append(
         Conv2D(
-            128,
+            second_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            second_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            second_layer_size,
             get_channels(),
             padding='same',
             activation='relu'
@@ -114,9 +137,11 @@ def generate_second_middle_layer(
 def generate_third_middle_layer(
         layers: list
 ):
+    third_layer_size = 128
+
     layers.append(
         Conv2D(
-            64,
+            third_layer_size,
             get_channels(),
             padding='same',
             activation='relu'
@@ -125,7 +150,34 @@ def generate_third_middle_layer(
 
     layers.append(
         Conv2D(
-            64,
+            third_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            third_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            third_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            third_layer_size,
             get_channels(),
             padding='same',
             activation='relu'
@@ -142,9 +194,38 @@ def generate_third_middle_layer(
 def generate_decision_middle_layer(
         layers: list
 ):
+    decision_layer_size = 64
+    
     layers.append(
         Conv2D(
-            32,
+            decision_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            decision_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            decision_layer_size,
+            get_channels(),
+            padding='same',
+            activation='relu'
+        )
+    )
+
+    layers.append(
+        Conv2D(
+            decision_layer_size,
             get_channels(),
             padding='same',
             activation='relu'

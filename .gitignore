@@ -1,8 +1,12 @@
+# directories to ignore
 .venv/*
-.ipynb_checkpoints/*
+
 .idea/*
 dist/*
 
-*.zip
+.ipynb_checkpoints/*
 
+
+# files to ignore
+*.zip
 *.pyc
