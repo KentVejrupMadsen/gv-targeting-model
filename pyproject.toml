@@ -1,15 +1,17 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools==61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = " gv-targeting-model"
+name = "gv-targeting-model_DESIGNERMADSEN"
 version = "0.0.1"
 authors = [
   { name="Kent vejrup Madsen", email="kent.vejrup.madsen@outlook.com" },
 ]
+
 description = "A small example package"
-readme = "README.md"
+readme = "Readme.md"
+
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3"
