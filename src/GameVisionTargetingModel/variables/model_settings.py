@@ -1,3 +1,4 @@
+# By default Settings
 width: int = 512
 height: int = 512
 
