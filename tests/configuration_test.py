@@ -1,7 +1,7 @@
-from src.GameVisionTargetingModel.setup_package \
+from GameVisionTargetingModel.setup_package \
     import default_settings
 
-from src.GameVisionTargetingModel.variables \
+from GameVisionTargetingModel.variables \
     import          \
     get_width,      \
     get_height,     \
