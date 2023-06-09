@@ -28,10 +28,16 @@ def tensorflow_settings():
 class MapClassifier(
     Sequential
 ):
-    def __init__(self):
+    def __init__(
+            self,
+            optional_preprocessing: bool = False
+    ):
         super().__init__(
-            generate_layers_for_map_classifier_v1()
+            generate_layers_for_map_classifier_v1(
+                optional_preprocessing
+            )
         )
+
         tensorflow_settings()
 
         self.setup()

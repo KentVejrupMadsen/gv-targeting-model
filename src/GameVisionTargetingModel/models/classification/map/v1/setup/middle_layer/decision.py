@@ -1,7 +1,7 @@
 from keras.layers \
     import \
     Conv2D, \
-    GlobalAveragePooling2D
+    GlobalMaxPooling2D
 
 from GameVisionTargetingModel.variables.model_settings \
     import \
@@ -11,13 +11,14 @@ from GameVisionTargetingModel.variables.model_settings \
 def generate_decision_middle_layer(
         layers: list
 ):
-    decision_layer_size = 64
+    decision_layer_size: int = 64
+    padding_style: str = 'same'
 
     layers.append(
         Conv2D(
             decision_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -26,7 +27,7 @@ def generate_decision_middle_layer(
         Conv2D(
             decision_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -35,7 +36,7 @@ def generate_decision_middle_layer(
         Conv2D(
             decision_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -44,12 +45,12 @@ def generate_decision_middle_layer(
         Conv2D(
             decision_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
 
     layers.append(
-        GlobalAveragePooling2D()
+        GlobalMaxPooling2D()
     )
 

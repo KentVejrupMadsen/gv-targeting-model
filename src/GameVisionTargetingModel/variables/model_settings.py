@@ -4,7 +4,7 @@ height: int = 512
 
 channels: int = 3
 
-number_of_labels: int = 4
+number_of_labels: int = 1000
 last_layer_multiplier: int = 8
 
 
@@ -27,35 +27,14 @@ def get_width() -> int:
     return width
 
 
-def set_width(
-        value: int
-) -> None:
-    global width
-    width = value
-
-
 def get_height() -> int:
     global height
     return height
 
 
-def set_height(
-        value: int
-) -> None:
-    global width
-    width = value
-
-
 def get_channels() -> int:
     global channels
     return channels
-
-
-def set_channels(
-        value: int
-) -> None:
-    global channels
-    channels = value
 
 
 def get_last_layer_multiplier() -> int:
@@ -72,6 +51,10 @@ def set_last_layer_multiplier(
         value: int
 ) -> None:
     global last_layer_multiplier
+
+    if last_layer_multiplier == value:
+        return
+
     last_layer_multiplier = value
 
 
@@ -79,4 +62,41 @@ def set_number_of_labels(
         value: int
 ) -> None:
     global number_of_labels
+
+    if number_of_labels == value:
+        return
+
     number_of_labels = value
+
+
+def set_width(
+        value: int
+) -> None:
+    global width
+
+    if width == value:
+        return
+
+    width = value
+
+
+def set_height(
+        value: int
+) -> None:
+    global height
+
+    if height == value:
+        return
+
+    height = value
+
+
+def set_channels(
+        value: int
+) -> None:
+    global channels
+
+    if channels == value:
+        return
+
+    channels = value

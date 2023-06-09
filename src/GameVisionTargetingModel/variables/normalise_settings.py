@@ -6,6 +6,8 @@ def get_rescaling_multiplier() -> float:
     return rescaling_multiplier
 
 
-def set_rescaling_multiplier(value: float) -> None:
+def set_rescaling_multiplier(
+        value: float
+) -> None:
     global rescaling_multiplier
     rescaling_multiplier = value
