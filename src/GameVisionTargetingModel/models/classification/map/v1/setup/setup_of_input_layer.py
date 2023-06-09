@@ -3,8 +3,9 @@ from keras.layers \
     Rescaling
 
 from src.GameVisionTargetingModel.variables \
-    import \
-    get_input_set
+    import                                  \
+    get_input_set,                          \
+    get_rescaling_multiplier
 
 
 def generate_input_layer(
@@ -12,7 +13,7 @@ def generate_input_layer(
 ):
     layers.append(
         Rescaling(
-            1./255,
+            get_rescaling_multiplier(),
             input_shape=get_input_set()
         )
     )

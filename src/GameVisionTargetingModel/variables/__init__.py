@@ -14,3 +14,8 @@ from src.GameVisionTargetingModel.variables.model_settings \
     set_channels,           \
     set_number_of_labels,   \
     set_last_layer_multiplier
+
+from src.GameVisionTargetingModel.variables.normalise_settings \
+    import \
+    get_rescaling_multiplier, \
+    set_rescaling_multiplier
