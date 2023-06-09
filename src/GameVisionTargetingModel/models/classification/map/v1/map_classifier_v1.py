@@ -1,7 +1,7 @@
 from keras.models \
     import Sequential
 
-from src.GameVisionTargetingModel.models.map_classification.V1.setup \
+from src.GameVisionTargetingModel.models.classification.map.v1.setup \
     import                  \
     generate_input_layer,   \
     generate_output_layer,  \
