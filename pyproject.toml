@@ -1,21 +1,37 @@
 [build-system]
-requires = ["setuptools==61.0", "keras"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "game-vision-targeting-model"
 version = "0.0.3"
+
 authors = [
   { name="Kent vejrup Madsen", email="kent.vejrup.madsen@outlook.com" },
 ]
 
 description = "A small example package"
 readme = "Readme.md"
-license = "License.md"
 
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3"
+]
+
+keywords = [
+    "game", "vision", "machine", "learning"
+]
+
+dependencies = [
+    "wheel",
+    "keras",
+    "tensorflow",
+    "numpy"
+]
+
+[project.optional-dependencies]
+test = [
+    'pytest'
 ]
 
 [project.urls]
