@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "game-vision-targeting-model"
-version = "0.0.3"
+version = "0.0.4"
 
 authors = [
   { name="Kent vejrup Madsen", email="kent.vejrup.madsen@outlook.com" },
@@ -37,6 +37,9 @@ test = [
 [project.urls]
 "Homepage" = "https://github.com/KentVejrupMadsen/gv-targeting-model"
 "Bug Tracker" = "https://github.com/KentVejrupMadsen/gv-targeting-model/issues"
+"License" = "https://github.com/KentVejrupMadsen/gv-targeting-model/blob/main/License.md"
+"Change logs" = "https://github.com/KentVejrupMadsen/gv-targeting-model/blob/main/Changelog.md"
+"requirements" = "https://raw.githubusercontent.com/KentVejrupMadsen/gv-targeting-model/main/requirements.txt"
 
 
 [tool.pytest.ini_options]
