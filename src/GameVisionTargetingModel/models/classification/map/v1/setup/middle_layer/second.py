@@ -1,7 +1,7 @@
 from keras.layers \
     import \
     Conv2D, \
-    MaxPooling2D
+    AveragePooling2D
 
 from GameVisionTargetingModel.variables.model_settings \
     import \
@@ -51,7 +51,7 @@ def generate_second_middle_layer(
     )
 
     layers.append(
-        MaxPooling2D(
+        AveragePooling2D(
             (2, 2)
         )
     )

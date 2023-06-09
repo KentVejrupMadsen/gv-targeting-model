@@ -1,7 +1,7 @@
 from keras.layers \
     import \
     Conv2D, \
-    GlobalAveragePooling2D
+    GlobalMaxPooling2D
 
 from GameVisionTargetingModel.variables.model_settings \
     import \
@@ -51,6 +51,6 @@ def generate_decision_middle_layer(
     )
 
     layers.append(
-        GlobalAveragePooling2D()
+        GlobalMaxPooling2D()
     )
 
