@@ -1,7 +1,4 @@
-from keras.models \
-    import Sequential
-
-from src.GameVisionTargetingModel.models.map_classification.V1.setup \
+from src.GameVisionTargetingModel.models.classification.map.v1.setup \
     import                  \
     generate_input_layer,   \
     generate_output_layer,  \
@@ -30,15 +27,3 @@ def generate_layers_for_map_classifier_v1(
     )
 
     return return_layers
-
-
-class MapClassifier(
-    Sequential
-):
-    def __init__(self):
-        super().__init__(
-            generate_layers_for_map_classifier_v1()
-        )
-
-
-

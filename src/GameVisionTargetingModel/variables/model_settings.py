@@ -68,6 +68,13 @@ def get_number_of_labels() -> int:
     return number_of_labels
 
 
+def set_last_layer_multiplier(
+        value: int
+) -> None:
+    global last_layer_multiplier
+    last_layer_multiplier = value
+
+
 def set_number_of_labels(
         value: int
 ) -> None:
