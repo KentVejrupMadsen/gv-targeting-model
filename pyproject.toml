@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
 
 
@@ -41,8 +41,6 @@ dev = [
     'pytest'
 ]
 
-
-
 [project.urls]
 "Changelog"     = "https://github.com/KentVejrupMadsen/gv-targeting-model/blob/main/Changelog.md"
 "Homepage"      = "https://github.com/KentVejrupMadsen/gv-targeting-model"
@@ -58,3 +56,7 @@ markers = [
     "debug"
 ]
 
+[tool.setuptools.packages.find]
+where = ['src']
+include = ['GameVisionTargetingModel*']
+namespaces = true
