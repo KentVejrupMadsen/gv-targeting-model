@@ -1,4 +1,4 @@
-from src.GameVisionTargetingModel.variables \
+from GameVisionTargetingModel.variables \
     import \
     set_channels, \
     set_width, \

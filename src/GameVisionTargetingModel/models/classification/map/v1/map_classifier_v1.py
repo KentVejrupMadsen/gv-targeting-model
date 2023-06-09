@@ -3,7 +3,7 @@ from keras.models \
 
 from tensorflow import compat, get_logger
 
-from src.GameVisionTargetingModel.models.classification.map.v1.layers \
+from GameVisionTargetingModel.models.classification.map.v1.layers \
     import generate_layers_for_map_classifier_v1
 
 from keras.losses \

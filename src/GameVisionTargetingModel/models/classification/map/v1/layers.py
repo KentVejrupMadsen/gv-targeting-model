@@ -1,4 +1,4 @@
-from src.GameVisionTargetingModel.models.classification.map.v1.setup \
+from GameVisionTargetingModel.models.classification.map.v1.setup \
     import                  \
     generate_input_layer,   \
     generate_output_layer,  \
