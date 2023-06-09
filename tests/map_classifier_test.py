@@ -1,8 +1,8 @@
-from src.GameVisionTargetingModel.models.classification\
-    import MapClassifierVersion1
+from src.GameVisionTargetingModel.singletons \
+    import get_map_classifier_model
 
 
 def test_make() -> None:
-    classifier = MapClassifierVersion1()
+    classifier = get_map_classifier_model()
     classifier.summary()
 
