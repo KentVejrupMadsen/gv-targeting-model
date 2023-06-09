@@ -32,7 +32,7 @@ def setup_input_variables(
 
 def setup_output_variables(
         last_layer_multiplier: int = 8,
-        number_of_labels: int = 100,
+        number_of_labels: int = 1000,
 ):
     set_last_layer_multiplier(
         last_layer_multiplier

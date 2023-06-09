@@ -23,3 +23,9 @@ def set_map_classifier_model(
 ):
     global map_classifier_model
     map_classifier_model = value
+
+
+def delete_of_map_classifier() -> None:
+    global map_classifier_model
+    del map_classifier_model
+
