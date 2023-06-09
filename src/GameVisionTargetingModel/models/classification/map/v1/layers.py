@@ -11,7 +11,9 @@ def generate_layers_for_map_classifier_v1(
 ) -> list:
     return_layers: list = []
 
-    generate_input_layer(return_layers)
+    generate_input_layer(
+        return_layers
+    )
 
     if addition_of_preprocessing:
         generate_preprocessing_layers(
