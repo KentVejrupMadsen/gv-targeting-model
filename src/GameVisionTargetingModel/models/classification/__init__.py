@@ -1,2 +1,2 @@
-from src.GameVisionTargetingModel.models.classification.map \
+from GameVisionTargetingModel.models.classification.map \
     import MapClassifierVersion1

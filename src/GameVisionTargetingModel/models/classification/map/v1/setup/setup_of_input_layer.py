@@ -2,9 +2,9 @@ from keras.layers \
     import \
     Rescaling
 
-from src.GameVisionTargetingModel.variables \
-    import                                  \
-    get_input_set,                          \
+from GameVisionTargetingModel.variables \
+    import                              \
+    get_input_set,                      \
     get_rescaling_multiplier
 
 

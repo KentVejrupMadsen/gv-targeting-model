@@ -1,7 +1,7 @@
 from keras.models \
     import Model
 
-from src.GameVisionTargetingModel.models.classification \
+from GameVisionTargetingModel.models.classification \
     import MapClassifierVersion1
 
 map_classifier_model = None
