@@ -5,6 +5,7 @@
 dist/*
 
 .ipynb_checkpoints/*
+.pytest_cache/*
 
 
 # files to ignore
