@@ -1,7 +1,8 @@
 from keras.models \
     import Sequential
 
-from tensorflow import compat, get_logger
+from tensorflow \
+    import get_logger
 
 from GameVisionTargetingModel.models.classification.map.v1.layers \
     import generate_layers_for_map_classifier_v1
@@ -19,7 +20,6 @@ from logging \
 
 
 def tensorflow_settings():
-    compat.v1.disable_eager_execution()
     get_logger().setLevel(
         ERROR
     )
