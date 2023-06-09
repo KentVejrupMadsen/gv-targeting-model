@@ -27,7 +27,9 @@ dependencies = [
 license = { file='License.md' }
 
 classifiers = [
-    "Programming Language :: Python :: 3"
+    "Programming Language :: Python :: 3",
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License"
 ]
 
 keywords = [
@@ -39,6 +41,10 @@ keywords = [
 [project.optional-dependencies]
 dev = [
     'pytest'
+]
+
+notebook = [
+    'jupyterlab'
 ]
 
 [project.urls]
@@ -57,5 +63,5 @@ markers = [
 ]
 
 [tool.setuptools.packages.find]
-where = ['GameVisionTargetingModel']
+where = ['src']
 namespaces = true
