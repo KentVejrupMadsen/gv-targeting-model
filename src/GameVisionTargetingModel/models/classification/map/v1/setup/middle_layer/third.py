@@ -11,13 +11,14 @@ from GameVisionTargetingModel.variables.model_settings \
 def generate_third_middle_layer(
         layers: list
 ):
-    third_layer_size = 128
+    third_layer_size: int = 128
+    padding_style: str = 'same'
 
     layers.append(
         Conv2D(
             third_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -26,7 +27,7 @@ def generate_third_middle_layer(
         Conv2D(
             third_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -35,7 +36,7 @@ def generate_third_middle_layer(
         Conv2D(
             third_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -44,7 +45,7 @@ def generate_third_middle_layer(
         Conv2D(
             third_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )
@@ -53,7 +54,7 @@ def generate_third_middle_layer(
         Conv2D(
             third_layer_size,
             get_channels(),
-            padding='same',
+            padding=padding_style,
             activation='relu'
         )
     )

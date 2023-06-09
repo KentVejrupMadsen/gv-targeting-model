@@ -7,7 +7,7 @@ from GameVisionTargetingModel.models.classification.map.v1.setup \
 
 
 def generate_layers_for_map_classifier_v1(
-        addition_of_preprocessing: bool = True
+        addition_of_preprocessing: bool = False
 ) -> list:
     return_layers: list = []
 
