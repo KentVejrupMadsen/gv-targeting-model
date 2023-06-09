@@ -3,7 +3,7 @@ from keras.layers \
     Flatten, \
     Dense
 
-from src.GameVisionTargetingModel.variables.model_settings \
+from src.GameVisionTargetingModel.variables\
     import \
     get_number_of_labels, \
     get_last_layer_multiplier
