@@ -3,7 +3,7 @@ from keras.layers \
     Conv2D, \
     GlobalAveragePooling2D
 
-from src.GameVisionTargetingModel.variables.model_settings \
+from GameVisionTargetingModel.variables.model_settings \
     import \
     get_channels
 

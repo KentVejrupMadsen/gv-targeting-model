@@ -1,4 +1,4 @@
-from src.GameVisionTargetingModel.singletons \
+from GameVisionTargetingModel.singletons \
     import get_map_classifier_model
 
 
